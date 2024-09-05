@@ -1,0 +1,8 @@
+
+POST http://localhost:8080/take_notes HTTP/1.1
+content-type: application/json
+
+{
+    "paperUrl": "https://arxiv.org/pdf/2407.18335",
+    "name": "Cognitive and Generative AI"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@rag_arxiv_fullstack/ts-config",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -4,12 +4,7 @@ const project = resolve(process.cwd(), 'tsconfig.json')
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: [
-    '@rocketseat/eslint-config/react',
-    'turbo',
-    'plugin:@next/next/recommended',
-    'prettier'
-  ],
+  extends: ['@rocketseat/eslint-config/node', 'turbo'],
   rules: {
     'prettier/prettier': [
       'error',

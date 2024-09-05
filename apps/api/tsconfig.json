@@ -1,0 +1,5 @@
+{
+  "extends": "@rag_arxiv_fullstack/ts-config/base.json",
+  "exclude": ["node_modules/", "dist/", "tests/"],
+  "include": ["./src"]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "./dist/server.js",
+  "private": true,
+  "scripts": {
+    "dev": "tsx --experimental-wasm-modules -r dotenv/config src/server.ts dotenv_config_path=.env.development.local",
+    "build": "npm run gen:supabase:types && tsc --declaration --outDir dist/",
+    "start": "tsx --experimental-wasm-modules -r dotenv/config src/server.ts dotenv_config_path=.env.development.local",
+    "start:dist": "npm run build && node -r dotenv/config dist/server.js",
+    "lint": "eslint src/**/*.ts --fix",
+    "gen:supabase:types": "npx supabase gen types typescript --project-id \"zawcewwzoseprcaujhjl\" --schema public > ./src/generated/db.ts"
+  },
+  "dependencies": {
+    "@langchain/community": "^0.2.31",
+    "@langchain/core": "^0.2.31",
+    "@langchain/openai": "^0.2.8",
+    "@supabase/supabase-js": "^2.38.4",
+    "axios": "^1.6.1",
+    "express": "^4.18.2",
+    "langchain": "^0.2.17",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^1.1.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@rag_arxiv_fullstack/eslint-config": "*",
+    "@rag_arxiv_fullstack/ts-config": "*",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20",
+    "@types/pdf-parse": "^1.1.4",
+    "dotenv": "^16.0.3",
+    "supabase": "^1.191.3",
+    "tsx": "^3.12.3",
+    "typescript": "^4.8.4"
+  }
+}
